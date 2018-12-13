@@ -11,8 +11,6 @@ class Application:
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
 
-
-
     def open_home_page(self):
         driver = self.driver
         driver.get("http://localhost/addressbook/")
