@@ -10,6 +10,6 @@ def app(request):
 
     def fin():
         fixture.session.logout()
-        fixture.destroy
+        fixture.destroy()
     request.addfinalizer(fin)
     return fixture

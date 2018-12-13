@@ -16,3 +16,11 @@ class SessionHelper:
     def logout(self):
         driver = self.app.driver
         driver.find_element_by_link_text("Logout").click()
+
+    def ensure_logout(self):
+        driver = self.app.driver
+        if len(driver.find_elements_by_link_text("Logout").click()) > 0:
+            self.logout()
+
+
+
